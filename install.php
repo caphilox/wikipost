@@ -1,6 +1,10 @@
 <?php
-	if(isset($_POST['sent'])){
-		
+ ini_set('display_errors', 'on');
+	if(isset($_POST['key'])){
+		$file=fopen('config.json','a');
+		$text='test';
+		fwrite($file, $txt);
+		fclose($file);
 	}
 	else{
 ?>
