@@ -2,7 +2,7 @@
  ini_set('display_errors', 'on');
 	if(isset($_POST['key'])){
 		$file=fopen('config.json','a');
-		$text='test';
+		$txt=json_encode(array('name'=>$_POST['name'],'key'=>$_POST['key'],'owner'=>$_POST['id']));
 		fwrite($file, $txt);
 		fclose($file);
 	}
